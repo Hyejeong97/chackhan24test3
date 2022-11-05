@@ -16,18 +16,18 @@
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
 <!-- <meta name="format-detection" content="telephone=no" /> -->
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no"> -->
-<link rel="stylesheet" type="text/css" href="chackhan24test3/css/common.css" />
-<link rel="stylesheet" type="text/css" href="chackhan24test3/css/global.css" />
-<link rel="stylesheet" type="text/css" href="chackhan24test3/css/respond.css" />
-<script type="text/javascript" src="chackhan24test3/js/html5.js"></script>
-<script type="text/javascript" src="chackhan24test3/js/jquery.min.js"></script>
-<script type="text/javascript" src="chackhan24test3/js/global.js"></script>
-<script type="text/javascript" src="chackhan24test3/js/java.js"></script>
+<link rel="stylesheet" type="text/css" href="/chackhan24test3/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/chackhan24test3/css/global.css" />
+<link rel="stylesheet" type="text/css" href="/chackhan24test3/css/respond.css" />
+<script type="text/javascript" src="/chackhan24test3/js/html5.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/jquery.min.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/global.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/java.js"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="/js/placeholder.js"></script>
 <![endif]-->
-<script type="text/javascript" src="chackhan24test3/js/sb_board.js"></script>
-<script type="text/javascript" src="chackhan24test3/js/web.util.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/sb_board.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/web.util.js"></script>
 
 <!-- language 처리 script (현재 언어와 호출 언어가 상이한 경우의 처리) -->
 <script type="text/javascript">
