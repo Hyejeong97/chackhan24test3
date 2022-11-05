@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <html class="kor">
 <head>
@@ -95,7 +95,7 @@ PC,Mobile 공통 header
 </li>
 
 <li class="">
-	<a href="${pageContext.request.contextPath}/manless/startup1">무인매장</a>
+	<a href="/chackhan24test3/manless/startup1">무인매장</a>
 	<ul>
 		<li class=""><a href="/chackhan24test3/manless/startup1">무인창업안내</a></li>
 		<li class=""><a href="/chackhan24test3/board/interior1?ca=무인창업">인테리어</a></li>
