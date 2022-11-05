@@ -16,18 +16,18 @@
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
 <!-- <meta name="format-detection" content="telephone=no" /> -->
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no"> -->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/global.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/respond.css" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/html5.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/global.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/java.js"></script>
+<link rel="stylesheet" type="text/css" href="chackhan24test3/css/common.css" />
+<link rel="stylesheet" type="text/css" href="chackhan24test3/css/global.css" />
+<link rel="stylesheet" type="text/css" href="chackhan24test3/css/respond.css" />
+<script type="text/javascript" src="chackhan24test3/js/html5.js"></script>
+<script type="text/javascript" src="chackhan24test3/js/jquery.min.js"></script>
+<script type="text/javascript" src="chackhan24test3/js/global.js"></script>
+<script type="text/javascript" src="chackhan24test3/js/java.js"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="/js/placeholder.js"></script>
 <![endif]-->
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/sb_board.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/web.util.js"></script>
+<script type="text/javascript" src="chackhan24test3/js/sb_board.js"></script>
+<script type="text/javascript" src="chackhan24test3/js/web.util.js"></script>
 
 <!-- language 처리 script (현재 언어와 호출 언어가 상이한 경우의 처리) -->
 <script type="text/javascript">
@@ -82,7 +82,7 @@ PC,Mobile 공통 header
 	<div class="inner">
 
 		<!-- logo -->
-		<a href="/" class="logo"><h1><img src="${pageContext.request.contextPath}/img/logo3.png" alt="착한가게24"/></h1></a>
+		<a href="/" class="logo"><h1><img src="chackhan24test3/img/logo3.png" alt="착한가게24"/></h1></a>
 
 		<!-- gnb -->
 		<ul id="gnb">
@@ -97,9 +97,9 @@ PC,Mobile 공통 header
 <li class="">
 	<a href="${pageContext.request.contextPath}/manless/startup1">무인매장</a>
 	<ul>
-		<li class=""><a href="${pageContext.request.contextPath}/manless/startup1">무인창업안내</a></li>
-		<li class=""><a href="${pageContext.request.contextPath}/board/interior1?ca=무인창업">인테리어</a></li>
-		<li class=""><a href="${pageContext.request.contextPath}/board/review1?ca=무인창업">창업후기</a></li>
+		<li class=""><a href="chackhan24test3/manless/startup1">무인창업안내</a></li>
+		<li class=""><a href="chackhan24test3/board/interior1?ca=무인창업">인테리어</a></li>
+		<li class=""><a href="chackhan24test3/board/review1?ca=무인창업">창업후기</a></li>
 	</ul>
 </li>
 
