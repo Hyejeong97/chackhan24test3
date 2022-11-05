@@ -82,7 +82,7 @@ PC,Mobile 공통 header
 	<div class="inner">
 
 		<!-- logo -->
-		<a href="/" class="logo"><h1><img src="chackhan24test3/img/logo3.png" alt="착한가게24"/></h1></a>
+		<a href="/" class="logo"><h1><img src="/chackhan24test3/img/logo3.png" alt="착한가게24"/></h1></a>
 
 		<!-- gnb -->
 		<ul id="gnb">
@@ -97,9 +97,9 @@ PC,Mobile 공통 header
 <li class="">
 	<a href="${pageContext.request.contextPath}/manless/startup1">무인매장</a>
 	<ul>
-		<li class=""><a href="chackhan24test3/manless/startup1">무인창업안내</a></li>
-		<li class=""><a href="chackhan24test3/board/interior1?ca=무인창업">인테리어</a></li>
-		<li class=""><a href="chackhan24test3/board/review1?ca=무인창업">창업후기</a></li>
+		<li class=""><a href="/chackhan24test3/manless/startup1">무인창업안내</a></li>
+		<li class=""><a href="/chackhan24test3/board/interior1?ca=무인창업">인테리어</a></li>
+		<li class=""><a href="/chackhan24test3/board/review1?ca=무인창업">창업후기</a></li>
 	</ul>
 </li>
 
