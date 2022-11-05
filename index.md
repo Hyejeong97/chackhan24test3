@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html class="kor">
 <head>
 <title>착한가게24</title>
@@ -10,7 +8,6 @@
 <!-- <meta property="og:image" content="http://i-pickme.co.kr/superboard/data/siteconfig/2020042413371215877030327098.jpg" /> -->
 <%-- <meta property="og:image" content="${pageContext.request.contextPath}/img/chackhan24_logo.png" /> --%>
 <meta property="og:url" content="http://webmaker21.net" />
-<%-- <meta name="naver-site-verification" content="<meta name="naver-site-verification" content="fbac6135992d54d4e7f690521cd943a39041682a" />"> --%>
 <meta name="google-site-verification" content="">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
