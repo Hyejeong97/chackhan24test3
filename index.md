@@ -6,7 +6,6 @@
 <meta property="og:title" content="착한가게24" />
 <meta property="og:description" content="착한가게24" />
 <!-- <meta property="og:image" content="http://i-pickme.co.kr/superboard/data/siteconfig/2020042413371215877030327098.jpg" /> -->
-<%-- <meta property="og:image" content="${pageContext.request.contextPath}/img/chackhan24_logo.png" /> --%>
 <meta property="og:url" content="http://webmaker21.net" />
 <meta name="google-site-verification" content="">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -256,7 +255,7 @@ Mobile 햄버거메뉴
 	<div class="section visual">
 		<ul class="roll">
 						<li>
-				<a href="" target="_blank" class="__pc"><img src="http://i-pickme.co.kr/superboard/data/banner/2020031613445215843338923400.jpg" /></a>
+				<a href="" target="_blank" class="__pc"><img src="/chackhan24test3/img/mainImg01.png" /></a>
 				<a href="" target="_blank" class="__ta"><img src="http://i-pickme.co.kr/superboard/data/banner/2020031613445215843338923400.jpg" /></a>
 				<a href="" target="_blank" class="__mo"><img src="http://i-pickme.co.kr/superboard/data/banner/2020031819522915845287498553_mo.jpg" /></a>
 			</li>
