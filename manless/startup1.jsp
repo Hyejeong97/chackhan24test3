@@ -9,7 +9,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="착한가게24" />
 <meta property="og:description" content="착한가게24" />
-<!-- <meta property="og:image" content="http://i-pickme.co.kr/superboard/data/siteconfig/2020042413371215877030327098.jpg" /> -->
 <meta property="og:url" content="착한가게24" />
 <meta name="naver-site-verification" content="<meta name="naver-site-verification" content="fbac6135992d54d4e7f690521cd943a39041682a" />">
 <meta name="google-site-verification" content="">
@@ -27,8 +26,8 @@
 <!--[if lt IE 10]>
 <script type="text/javascript" src="/js/placeholder.js"></script>
 <![endif]-->
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/sb_board.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/web.util.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/sb_board.js"></script>
+<script type="text/javascript" src="/chackhan24test3/js/web.util.js"></script>
 
 <!-- language 처리 script (현재 언어와 호출 언어가 상이한 경우의 처리) -->
 <script type="text/javascript">
@@ -83,7 +82,7 @@ PC,Mobile 공통 header
 	<div class="inner">
 
 		<!-- logo -->
-		<a href="/" class="logo"><h1><img src="${pageContext.request.contextPath}/img/logo3.png" alt="착한가게24" /></h1></a>
+		<a href="/" class="logo"><h1><img src="/chackhan24test3/img/logo3.png" alt="착한가게24" /></h1></a>
 
 		<!-- gnb -->
 		<ul id="gnb">
@@ -96,10 +95,10 @@ PC,Mobile 공통 header
 </li>
 
 <li class="active">
-	<a href="${pageContext.request.contextPath}/manless/startup1.jsp">무인매장</a>
+	<a href="/chackhan24test3/manless/startup1.jsp">무인매장</a>
 	<ul>
-		<li class="active"><a href="${pageContext.request.contextPath}/manless/startup1.jsp">무인창업안내</a></li>
-		<li class=""><a href="${pageContext.request.contextPath}/board/interior1.jsp">인테리어</a></li>
+		<li class="active"><a href="/chackhan24test3/manless/startup1.jsp">무인창업안내</a></li>
+		<li class=""><a href="/chackhan24test3/board/interior1.jsp">인테리어</a></li>
 		<li class=""><a href="/board/review1?ca=무인창업">창업후기</a></li>
 	</ul>
 </li>
@@ -232,10 +231,10 @@ Mobile 햄버거메뉴
 </li>
 
 <li class="active">
-	<a href="${pageContext.request.contextPath}/manless/startup1.jsp">무인매장</a>
+	<a href="/chackhan24test3/manless/startup1.jsp">무인매장</a>
 	<ul>
-		<li class="active"><a href="${pageContext.request.contextPath}/manless/startup1.jsp">무인창업안내</a></li>
-		<li class=""><a href="${pageContext.request.contextPath}/board/interior1.jsp">인테리어</a></li>
+		<li class="active"><a href="/chackhan24test3/manless/startup1.jsp">무인창업안내</a></li>
+		<li class=""><a href="/chackhan24test3/board/interior1.jsp">인테리어</a></li>
 		<li class=""><a href="/board/review1?ca=무인창업">창업후기</a></li>
 	</ul>
 </li>
@@ -324,7 +323,7 @@ li 에 'hidden-gnb' Class 추가
 
 		<section id="sub">
 
-			<div class="sub-vis" style="background-image: url('${pageContext.request.contextPath}/img/ice/ice01.PNG');">
+			<div class="sub-vis" style="background-image: url('/chackhan24test3/img/ice/ice01.PNG');">
 				<div>
 					<!-- 무인매장					<em>저희 회사를 소개합니다.</em> -->
 					
