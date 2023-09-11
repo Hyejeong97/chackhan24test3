@@ -11,8 +11,10 @@
 
 /* ================= VARIABLE ================ */
 :root {
-  --primary-color: hsl(9, 94%, 61%);
-  --primary-color-alt: hsl(28, 72%, 83%);
+/*   --primary-color: hsl(9, 94%, 61%); */
+/*   --primary-color-alt: hsl(28, 72%, 83%); */
+  --primary-color: #000000;
+  --primary-color-alt: #000000;
   --second-color: #3e537c;
   --second-color-alt: hsla(220, 33%, 36%, 65%);
   --third-color: hsl(220, 36%, 28%);
