@@ -42,7 +42,8 @@ img {
 
 /* -- BODY -- */
 body {
-  font-family: "Raleway", sans-serif;
+/*   font-family: "Raleway", sans-serif; */
+  font-family: "¸¼Àº°íµñ", "Malgun Gothic", serif;
   font-size: 1rem;
   background-color: var(--white-color);
 }
