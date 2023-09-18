@@ -21,7 +21,9 @@
   --white-color: #fbfbfb;
   --white-color-alt: hsl(12, 14%, 93%);
   --dark-color: hsl(300, 100%, 0%);
-  --mint-color: #A9F5F2;
+/*   --mint-color: #CFF1F9; */
+/*   --mint-color: #B8E6E1; */
+  --mint-color: #DDECCA;
 }
 
 /* ================= BASE ==================== */
@@ -58,16 +60,6 @@ header {
   justify-content: space-between;
   background-color: var(--mint-color);
   padding: 1rem 2rem;
-}
-.company-logo {
-  font-size: 2.5rem;
-  background: -webkit-linear-gradient(
-    120deg,
-    var(--dark-color),
-    var(--dark-color)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .nav-items {
   display: flex;
@@ -755,6 +747,44 @@ input[type="submit"]:hover {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
     url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
       no-repeat 50% 50% / cover;
+}
+
+@font-face {
+	font-family: 'yg-jalnan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.why1, .why3 {
+	color : #FC5230;
+	-webkit-text-stroke: 1.5px black;
+	font-size : 60px;
+}
+
+.number {
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 40px;
+	color : #51B098;
+	-webkit-text-stroke: 1.5px black;
+}
+
+.logo {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 40px;
+}
+
+.fontSetTitle {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 20px;
+}
+
+.fontSet {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 15px;
 }
 
 /* .swiper-slide--three { */
