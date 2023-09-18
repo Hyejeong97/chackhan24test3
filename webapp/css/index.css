@@ -158,16 +158,16 @@ header {
   margin: 2rem 0;
 }
 .offer {
-  background-color: var(--dark-color);
+/*   background-color: var(--dark-color); */
   margin: 1rem 0;
   display: grid;
 }
 .offer img {
-  background-color: var(--dark-color);
+/*   background-color: var(--dark-color); */
   padding: 2rem 0;
 }
 .offer-1 img {
-  background-color: var(--dark-color);
+/*   background-color: var(--dark-color); */
   padding: 3rem 0;
 }
 .offer-description {
@@ -469,7 +469,7 @@ input[type="submit"]:hover {
     grid-template-areas: "offer-1-img offer-desc-1";
   }
   .offer-1 img {
-    background-color: var(--dark-color);
+/*     background-color: var(--dark-color); */
     padding: 2rem 0;
   }
   .offer-2 {
