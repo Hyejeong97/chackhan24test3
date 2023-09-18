@@ -6,6 +6,8 @@ $(document).ready(function(){
 	https://dribbble.com/shots/4684682-Aquatic-Animals
 	*/
 	
+	$("[class*=why]").css("font-family", "'yg-jalnan', verdana, tahoma");
+	
 	var swiper = new Swiper(".swiper", {
 	  effect: "coverflow",
 	  grabCursor: true,
