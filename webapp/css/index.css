@@ -15,8 +15,8 @@
 /*   --primary-color-alt: hsl(28, 72%, 83%); */
   --primary-color: #000000;
   --primary-color-alt: #000000;
-/*   --second-color: #3e537c; */
-  --second-color: #DDECCA;
+  --second-color: #3e537c;
+/*   --second-color: #DDECCA; */
   --second-color-alt: hsla(220, 33%, 36%, 65%);
   --third-color: hsl(220, 36%, 28%);
   --white-color: #fbfbfb;
@@ -321,7 +321,7 @@ input[type="submit"]:hover {
 }
 /* =============== FOOTER =============== */
 .top-footer {
-  background-color: var(--second-color);
+  background-color: #DDECCA;
   display: flex;
   flex-direction: column;
 }
