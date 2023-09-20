@@ -15,7 +15,8 @@
 /*   --primary-color-alt: hsl(28, 72%, 83%); */
   --primary-color: #000000;
   --primary-color-alt: #000000;
-  --second-color: #3e537c;
+/*   --second-color: #3e537c; */
+  --second-color: #DDECCA;
   --second-color-alt: hsla(220, 33%, 36%, 65%);
   --third-color: hsl(220, 36%, 28%);
   --white-color: #fbfbfb;
@@ -342,7 +343,8 @@ input[type="submit"]:hover {
   font-weight: 300;
   font-size: 1.1rem;
   padding: 0.1rem 0;
-  color: var(--white-color-alt);
+/*   color: var(--white-color-alt); */
+  color: black;
 }
 .footer-items h3:hover {
   text-decoration: underline;
@@ -356,7 +358,7 @@ input[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--third-color);
+  background-color: #AFD485;
 }
 .copyright {
   color: var(--white-color-alt);
@@ -749,42 +751,64 @@ input[type="submit"]:hover {
       no-repeat 50% 50% / cover;
 }
 
-@font-face {
-	font-family: 'yg-jalnan';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+
+table.type07 {
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  margin: 20px 10px;
+}
+table.type07 thead {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background: #51B098;
+}
+table.type07 thead th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-right: 1px solid #ccc;
+  color: #fff;
 }
 
-.why1, .why3 {
-	color : #FC5230;
-	-webkit-text-stroke: 1.5px black;
-	font-size : 60px;
+table.type07 {
+	font-family : 'Godo';
+	width: 100%;
 }
 
-.number {
-    font-family: 'yg-jalnan', verdana, tahoma;
-    font-size: 40px;
-	color : #51B098;
-	-webkit-text-stroke: 1.5px black;
+table.type07 tbody th {
+/*   width: 150px; */
+  padding: 10px;
+/*   font-weight: bold; */
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+/*   background: #DDECCA; */
+}
+table.type07 td[scope=row] {
+/*   width: 350px; */
+  padding: 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+/*   background: #F9F9FA; */
 }
 
-.logo {
-	color: black;
-    font-family: 'yg-jalnan', verdana, tahoma;
-    font-size: 40px;
+table.type07 td {
+/*   width: 350px; */
+  padding: 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
-.fontSetTitle {
-	color: black;
-    font-family: 'yg-jalnan', verdana, tahoma;
-    font-size: 20px;
+table.type07 td.detail{
+	font-size:12px;
 }
 
-.fontSet {
-	color: black;
-    font-family: 'yg-jalnan', verdana, tahoma;
-    font-size: 15px;
+table.type07 td.cost{
+	font-weight:bold;
 }
 
 /* .swiper-slide--three { */

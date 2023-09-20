@@ -1,0 +1,84 @@
+.mt100 { margin-top : 100px; }
+.mt80 { margin-top : 80px; }
+.mt50 { margin-top : 50px; }
+.mt20 { margin-top : 20px; }
+
+
+.lineSet { background: linear-gradient(to top, #FFE400 50%, transparent 50%); }
+.lineGraySet { background: linear-gradient(to top, #ccc 50%, transparent 50%); }
+.lineBlueSet { background: linear-gradient(to top, #00D8FF 50%, transparent 50%); }
+.lineRedSet { background: linear-gradient(to top, #FC5230 50%, transparent 50%); }
+
+@font-face {
+    font-family: 'Godo';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/nhn/GodoMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/nhn/GodoMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/nhn/GodoMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/nhn/GodoMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/nhn/GodoMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+	font-family: 'yg-jalnan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.why1, .why3 {
+	color : #FC5230;
+	-webkit-text-stroke: 1.5px black;
+	font-size : 60px;
+}
+
+.number {
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 40px;
+	color : #51B098;
+	-webkit-text-stroke: 1.5px black;
+}
+
+.logo {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 40px;
+}
+
+.fontSetLg {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 30px;
+}
+
+.fontSetCol {
+	color : #FC5230;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 35px;
+}
+
+.fontSetTitle {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 20px;
+}
+
+.fontSet {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 15px;
+}
+
+.fontJnSet {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 13px;
+}
+
+.fontGodoSet {
+	color: black;
+    font-family: 'Godo';
+    font-size: 15px;
+}
