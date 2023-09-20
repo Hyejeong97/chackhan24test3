@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$(".mainPage").on("click", function() {
-		location.href = 'index.jsp';
+		location.href = 'index.html';
 	});
 
 	
