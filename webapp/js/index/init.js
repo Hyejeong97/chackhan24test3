@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	$(".mainPage").on("click", function() {
+		location.href = 'index.jsp';
+	});
+
 	
 	/*
 	inspiration
