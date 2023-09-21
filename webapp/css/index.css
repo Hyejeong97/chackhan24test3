@@ -775,6 +775,7 @@ table.type07 thead th {
 table.type07 {
 	font-family : 'Godo';
 	width: 100%;
+	text-align: center;
 }
 
 table.type07 tbody th {
