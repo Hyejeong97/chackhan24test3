@@ -74,6 +74,90 @@ $(document).ready(function(){
 	        bxMenu.classList.remove('hide-bx');
 	        bxX.classList.remove('show-bx');
 	    }
-	})
+	});
+	
+	var dataset = {
+	    label: "폐점률",
+	    backgroundColor: ['#ffd950'],//라벨별 컬러설정
+	    //borderColor: '#22252B',
+	    data: [1]
+	}
+	
+	var labels=['폐점률']; 
+	  
+	var datasets={ datasets:[dataset], labels:labels }
+	
+	var config = {
+	    type: 'doughnut',
+	    data: datasets, //데이터 셋 
+	    options: {
+	        responsive: true,
+	        maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
+	        legend: {
+	            position: 'top',
+	            fontColor: 'black',
+	            align: 'center',
+	            display: true,
+	            fullWidth: true,
+	            labels: {
+	                fontColor: 'rgb(0, 0, 0)'
+	            }
+	        },
+	        plugins: {
+	            labels: {//두번째 script태그를 설정하면 각 항목에다가 원하는 데이터 라벨링을 할 수 있다.
+	                render: 'value',
+	                fontColor: 'black',
+	                fontSize: 15,
+	                precision: 2
+	            }
+	
+	        }
+	    }
+	}
+	
+	var canvas=document.getElementById('pieChart');
+	var pieChart = new Chart(canvas,config);
+	
+	var dataset = {
+	    label: "재계약률",
+	    backgroundColor: ['#28c3d7'],//라벨별 컬러설정
+	    //borderColor: '#22252B',
+	    data: [1]
+	}
+	
+	var labels = ['재계약률']; 
+	  
+	var datasets = { datasets:[dataset], labels:labels }
+	
+	var config = {
+	    type: 'doughnut',
+	    data: datasets, //데이터 셋 
+	    options: {
+	        responsive: true,
+	        maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
+	        legend: {
+	            position: 'top',
+	            fontColor: 'black',
+	            align: 'center',
+	            display: true,
+	            fullWidth: true,
+	            labels: {
+	                fontColor: 'rgb(0, 0, 0)'
+	            }
+	        },
+	        plugins: {
+	            labels: {//두번째 script태그를 설정하면 각 항목에다가 원하는 데이터 라벨링을 할 수 있다.
+	                render: 'value',
+	                fontColor: 'black',
+	                fontSize: 15,
+	                precision: 2
+	            }
+	
+	        }
+	    }
+	}
+	
+	var canvas=document.getElementById('pieChart2');
+	var pieChart = new Chart(canvas,config);
 
 });
