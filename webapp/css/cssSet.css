@@ -1,7 +1,9 @@
+.mt150 { margin-top : 150px; }
 .mt100 { margin-top : 100px; }
 .mt80 { margin-top : 80px; }
 .mt50 { margin-top : 50px; }
 .mt20 { margin-top : 20px; }
+.mt10 { margin-top : 10px; }
 
 
 .lineSet { background: linear-gradient(to top, #FFE400 50%, transparent 50%); }
