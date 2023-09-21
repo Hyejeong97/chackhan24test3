@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <div class="mainPage">
+    <div class="mainPage" style="cursor:pointer;">
     		<img src="./webapp/img/titleLogo.png" style="width:60px;height:50px;"/>
     	<a href="#" class="">
     		<span class="logo">착한가게</span><span class="number">24</span>
@@ -20,7 +20,7 @@
     </div>
     <nav class="navbar">
       <ul class="nav-items">
-        <li class="nav-item"><a href="#" class="nav-link" style="font-weight:bold;">HOME</a></li>
+        <li class="nav-item"><a href="#" class="nav-link mainPage" style="font-weight:bold;">HOME</a></li>
         <li class="nav-item"><a href="#" class="nav-link" style="font-weight:bold;">무인매장</a></li>
         <li class="nav-item"><a href="#" class="nav-link" style="font-weight:bold;">상담문의</a></li>
       </ul>
@@ -41,9 +41,9 @@
 <!--     <p>Beauty and mystery are hidden under the sea. Explore with our application to know about Aquatic Animals.</p> -->
 <!--     <a href="#">download app</a> -->
 <!--   </div> -->
-  <div class="swiper">
+  <div class="swiper" >
     <div class="swiper-wrapper">
-      <div class="swiper-slide swiper-slide--one" style="height:500px;width:500px;background-image:url('./webapp/img/store/7store.jpg');background-repeat: no-repeat;">
+      <div class="swiper-slide swiper-slide--one" style="max-width:100%; height:auto;background-image:url('./webapp/img/store/7store.jpg');background-repeat: no-repeat;">
         <div style="opacity: 0.7;margin:auto;background-color:#F0ECEB;border-radius:20px 20px 20px 20px;margin-bottom:20px;height:35px;width:350px;">
           <h2 style="margin-top:8px;opacity: 1;">
           	<a target="_blank" class="nav-link fontSetTitle" href="https://map.naver.com/p/entry/place/1359709822?lng=126.8576286&lat=37.5325413&placePath=%2Fhome%3Fentry%3Dplt&c=15.00,0,0,0,dh">
@@ -73,13 +73,15 @@
   </div>
 <!--   <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg"> -->
 <!--   <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2"> -->
-<!-- </main> -->
+
     
     
     
     
     
     </section>
+    
+    </main>
 
     <!-- OFFER SECTION -->
     <section class="container section-2">
@@ -91,8 +93,7 @@
       <div style="margin-top:100px;"></div>
       <!-- offer 1 -->
       <div class="offer offer-1">
-<!--         <img src="./webapp/img/nabu01.jpg" style="" alt="a computer in dark with with white shadow" class="offer-img offer-1-img"> -->
-        <img src="./webapp/img/nabu01.jpg" style="" alt="a computer in dark with with white shadow" class="">
+        <img src="./webapp/img/nabu01.jpg" style="max-width:100%; height:auto;" alt="a computer in dark with with white shadow" class="img01">
         <div class="offer-description offer-desc-1" style="height:390px;">
           <h2 class="offer-title fontSetTitle">1. 상권분석</h2>
           <p class="offer-hook fontSet">무인편의점의 매출을 좌우하는 것 중 가장 중요한 항목은 상권분석입니다. 30년 경력으로 준비된 전문가가 상권 분석을 컨설팅을 진행해드립니다.</p>
@@ -415,7 +416,7 @@
         <input type="submit" value="SUBSCRIBE">
       </div>
     </section>
-  </main>
+<!--   </main> -->
   <footer>
     <div class="container top-footer">
       <!-- footer item 1 -->
