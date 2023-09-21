@@ -585,14 +585,14 @@ input[type="submit"]:hover {
 /*   font-family: "Open Sans", sans-serif; */
 /* } */
 
-main {
-  position: relative;
-  width: calc(min(90rem, 100%));
-  margin: 0 auto;
-  min-height: 100vh;
-  column-gap: 3rem;
-  padding-block: min(20vh, 3rem);
-}
+/* main { */
+/*   position: relative; */
+/*   width: calc(min(90rem, 100%)); */
+/*   margin: 0 auto; */
+/*   min-height: 100vh; */
+/*   column-gap: 3rem; */
+/*   padding-block: min(20vh, 3rem); */
+/* } */
 
 /* .bg { */
 /*   position: fixed; */
@@ -837,19 +837,19 @@ table.type07 td.cost{
 /*   background-image: none; */
 /* } */
 
-@media screen and (min-width: 48rem) {
-  main {
-    display: flex;
-    align-items: center;
-  }
-  .bg,
-  .bg2 {
-    opacity: 0.1;
-  }
-}
+/* @media screen and (min-width: 48rem) { */
+/*   main { */
+/*     display: flex; */
+/*     align-items: center; */
+/*   } */
+/*   .bg, */
+/*   .bg2 { */
+/*     opacity: 0.1; */
+/*   } */
+/* } */
 
-@media screen and (min-width: 93.75rem) {
-  .swiper {
-    width: 85%;
-  }
-}
+/* @media screen and (min-width: 93.75rem) { */
+/*   .swiper { */
+/*     width: 85%; */
+/*   } */
+/* } */
