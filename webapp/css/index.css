@@ -845,8 +845,8 @@ table.type07 td.cost{
 /*   } */
 /* } */
 
-/* @media screen and (min-width: 93.75rem) { */
-/*   .swiper { */
-/*     width: 85%; */
-/*   } */
-/* } */
+@media screen and (max-width: 600px) {
+  .swiper {
+    width: 85%;
+  }
+}
