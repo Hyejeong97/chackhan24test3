@@ -848,5 +848,7 @@ table.type07 td.cost{
 @media screen and (max-width: 600px) {
   .swiper {
     width: 85%;
+    display: flex;
+    align-items: center;
   }
 }
