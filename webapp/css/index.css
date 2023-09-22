@@ -559,7 +559,7 @@ input[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--third-color);
+    background-color: #AFD485;
   }
   .copyright {
     color: hsla(0, 0%, 98%, 0.747);
