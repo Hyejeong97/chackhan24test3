@@ -76,29 +76,31 @@ $(document).ready(function(){
 	    }
 	});
 	
+	
+	// 폐점률 도넛 차트
 	var dataset = {
-	    label: "폐점률",
-	    backgroundColor: ['#ffd950'],//라벨별 컬러설정
-	    //borderColor: '#22252B',
-	    data: [1]
+	    label : ['폐점률'],
+	    backgroundColor : ['#ffd950'],//라벨별 컬러설정
+	    data: [0.001], // 데이터 값 (합이 100%)
 	}
 	
-	var labels=['폐점률']; 
+	
+	var labels = ['폐점률']; 
 	  
-	var datasets={ datasets:[dataset], labels:labels }
+	var datasets = { datasets : [dataset], labels : labels}
 	
 	var config = {
 	    type: 'doughnut',
 	    data: datasets, //데이터 셋 
 	    options: {
-	        responsive: true,
+	        responsive: false,
 	        maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
 	        legend: {
 	            position: 'top',
 	            fontColor: 'black',
 	            align: 'center',
 	            display: true,
-	            fullWidth: true,
+	            fullWidth: false,
 	            labels: {
 	                fontColor: 'rgb(0, 0, 0)'
 	            }
@@ -109,20 +111,22 @@ $(document).ready(function(){
 	                fontColor: 'black',
 	                fontSize: 15,
 	                precision: 2
-	            }
-	
+	            },
 	        }
 	    }
 	}
 	
 	var canvas=document.getElementById('pieChart');
+	canvas.width = 300;
+	canvas.height = 300;
 	var pieChart = new Chart(canvas,config);
+	
 	
 	var dataset = {
 	    label: "재계약률",
 	    backgroundColor: ['#28c3d7'],//라벨별 컬러설정
 	    //borderColor: '#22252B',
-	    data: [1]
+	    data: [40]
 	}
 	
 	var labels = ['재계약률']; 
@@ -133,14 +137,14 @@ $(document).ready(function(){
 	    type: 'doughnut',
 	    data: datasets, //데이터 셋 
 	    options: {
-	        responsive: true,
+	        responsive: false,
 	        maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
 	        legend: {
 	            position: 'top',
 	            fontColor: 'black',
 	            align: 'center',
 	            display: true,
-	            fullWidth: true,
+	            fullWidth: false,
 	            labels: {
 	                fontColor: 'rgb(0, 0, 0)'
 	            }
@@ -151,13 +155,16 @@ $(document).ready(function(){
 	                fontColor: 'black',
 	                fontSize: 15,
 	                precision: 2
-	            }
+	            },
 	
 	        }
 	    }
 	}
 	
-	var canvas=document.getElementById('pieChart2');
-	var pieChart = new Chart(canvas,config);
+	var canvas = document.getElementById('pieChart2');
+	canvas.width = 300;
+	canvas.height = 300;
+	var pieChart2 = new Chart(canvas, config);
+	
 
 });
