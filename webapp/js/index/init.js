@@ -4,7 +4,7 @@ $(document).ready(function(){
 		location.href = 'index.html';
 	});
 	
-	$(".offer-desc-1").css("height",$(".offer-1-img")[0]['height']);
+	//$(".offer-desc-1").css("height",$(".offer-1-img")[0]['height']);
 	
 	
 	/*
