@@ -2,6 +2,7 @@
 .mt100 { margin-top : 100px; }
 .mt80 { margin-top : 80px; }
 .mt50 { margin-top : 50px; }
+.mt30 { margin-top : 30px; }
 .mt20 { margin-top : 20px; }
 .mt10 { margin-top : 10px; }
 
@@ -83,4 +84,10 @@
 	color: black;
     font-family: 'Godo';
     font-size: 15px;
+}
+
+.fontGodoLgSet {
+	color: black;
+    font-family: 'Godo';
+    font-size: 20px;
 }
