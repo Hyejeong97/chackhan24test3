@@ -4,7 +4,11 @@ $(document).ready(function(){
 		location.href = 'index.html';
 	});
 	
-	$(".offer-desc-1").css("height",$(".offer-1-img")[0]['height']);
+	var desc = $("[class*=offer-desc]");
+	
+	$.each(desc, function(i, item){
+		$(item).css("height", $(item).closest("div.offer").find("[class*=offer-img]")[0]['height']);
+	});
 	
 	
 	/*
