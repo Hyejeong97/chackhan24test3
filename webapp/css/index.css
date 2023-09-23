@@ -941,15 +941,49 @@ a.control_next {
   font-size: 18px;
 }
 
+
+/* 기본 스타일 */
+nav {
+/*     background-color: #333; */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+ul.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul.menu li {
+    margin: 0;
+}
+
+ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 햄버거 아이콘 스타일 */
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
 /* 미디어 쿼리를 사용한 반응형 스타일 */
 @media (max-width: 768px) {
-    ul.nav-items {
+    ul.menu {
         display: none;
         flex-direction: column;
         background-color: #333;
@@ -960,7 +994,7 @@ a.control_next {
         z-index: 1;
     }
 
-    ul.nav-items.active {
+    ul.menu.active {
         display: flex;
     }
 
