@@ -3,6 +3,10 @@ $(document).ready(function(){
 	$(".mainPage").on("click", function() {
 		location.href = 'index.html';
 	});
+
+	$(".storePage").on("click", function() {
+		location.href = 'web/store.html';
+	});
 	
 	var desc = $("[class*=offer-desc]");
 	
