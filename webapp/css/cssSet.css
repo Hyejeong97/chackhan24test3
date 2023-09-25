@@ -87,6 +87,12 @@
     font-size: 15px;
 }
 
+.fontGodo13 {
+	color: black;
+    font-family: 'Godo';
+    font-size: 14px;
+}
+
 .fontGodoLgSet {
 	color: black;
     font-family: 'Godo';

@@ -941,3 +941,7 @@ a.control_next {
   font-size: 18px;
 }
 
+
+.mapTable01 td span {
+	cursor : pointer;
+}
