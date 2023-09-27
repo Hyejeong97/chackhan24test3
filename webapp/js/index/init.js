@@ -7,6 +7,10 @@ $(document).ready(function(){
 	$(".storePage").on("click", function() {
 		location.href = 'web/store.html';
 	});
+
+	$(".aboutPage").on("click", function() {
+		location.href = 'web/about.html';
+	});
 	
 	var desc = $("[class*=offer-desc]");
 	
