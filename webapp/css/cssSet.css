@@ -47,6 +47,13 @@
 	-webkit-text-stroke: 1.5px black;
 }
 
+.num24 {
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 30px;
+	color : #51B098;
+	-webkit-text-stroke: 1.5px black;
+}
+
 .logo {
 	color: black;
     font-family: 'yg-jalnan', verdana, tahoma;

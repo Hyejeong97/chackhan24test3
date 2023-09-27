@@ -152,16 +152,16 @@ header {
 }
 .offer {
 /*   background-color: var(--dark-color); */
-  margin: 1rem 0;
-  display: grid;
+/*   margin: 1rem 0; */
+/*   display: grid; */
 }
 .offer img {
 /*   background-color: var(--dark-color); */
-  padding: 2rem 0;
+/*   padding: 2rem 0; */
 }
 .offer-1 img {
 /*   background-color: var(--dark-color); */
-  padding: 3rem 0;
+/*   padding: 3rem 0; */
 }
 .offer-description {
   background-color: var(--white-color-alt);
@@ -176,28 +176,6 @@ header {
 .offer-description .offer-hook {
   color: var(--second-color-alt);
   font-size: 1.2rem;
-}
-.offer-description .cart-btn {
-  cursor: pointer;
-  color: var(--second-color-alt);
-  font-size: 1.1rem;
-  display: grid;
-  place-items: center;
-  margin: 2rem 0 1rem 0;
-  width: 10rem;
-  height: 3rem;
-  background-image: linear-gradient(
-    to top,
-    var(--primary-color-alt),
-    var(--primary-color)
-  );
-}
-.offer-description .cart-btn:hover {
-  background-image: linear-gradient(
-    to bottom,
-    var(--primary-color-alt),
-    var(--primary-color)
-  );
 }
 
 /* -------- PRODUCT SECTION ----------- */
@@ -460,26 +438,26 @@ input[type="submit"]:hover {
     grid-template-rows: auto auto;
   }
   .offer-1 {
-    grid-template-areas: "offer-1-img offer-desc-1";
+/*     grid-template-areas: "offer-1-img offer-desc-1"; */
   }
   .offer-1 img {
 /*     background-color: var(--dark-color); */
-    padding: 2rem 0;
+/*     padding: 2rem 0; */
   }
   .offer-2 {
     grid-template-areas: "offer-desc-2 offer-2-img";
   }
   .offer-1-img {
-    grid-area: offer-1-img;
+/*     grid-area: offer-1-img; */
   }
   .offer-2-img {
-    grid-area: offer-2-img;
+/*     grid-area: offer-2-img; */
   }
   .offer-desc-1 {
-    grid-area: offer-desc-1;
+/*     grid-area: offer-desc-1; */
   }
   .offer-desc-2 {
-    grid-area: offer-desc-2;
+/*     grid-area: offer-desc-2; */
   }
   .offer-description .offer-title {
     font-size: 1.9rem;
@@ -494,9 +472,6 @@ input[type="submit"]:hover {
   }
   .offer-description .offer-title {
     padding: 0.5rem 0 1rem 0;
-  }
-  .offer-description .cart-btn {
-    margin: 2rem 0 0.5rem 0;
   }
   /* -------- PRODUCT SECTION ----------- */
   .section-3 {
