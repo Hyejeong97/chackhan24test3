@@ -10,9 +10,9 @@ $(document).ready(function(){
 	
 	var desc = $("[class*=offer-desc]");
 	
-	$.each(desc, function(i, item){
-		$(item).css("height", $(item).closest("div.offer").find("[class*=offer-img]")[0]['height']);
-	});
+//	$.each(desc, function(i, item){
+//		$(item).css("height", $(item).closest("div.offer").find("[class*=offer-img]")[0]['height']);
+//	});
 	
 	
 	/*
