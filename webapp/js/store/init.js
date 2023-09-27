@@ -8,6 +8,10 @@ $(document).ready(function(){
 		location.href = 'store.html';
 	});
 	
+	$(".aboutPage").on("click", function() {
+		location.href = 'about.html';
+	});
+	
 	
 	/*
 	inspiration
