@@ -12,11 +12,6 @@ $(document).ready(function(){
 		location.href = 'web/about.html';
 	});
 	
-	var desc = $("[class*=offer-desc]");
-	
-//	$.each(desc, function(i, item){
-//		$(item).css("height", $(item).closest("div.offer").find("[class*=offer-img]")[0]['height']);
-//	});
 	
 	
 	/*
@@ -93,13 +88,13 @@ $(document).ready(function(){
 	
 	// 폐점률 도넛 차트
 	var dataset = {
-	    label : ['폐점률(%)'],
+	    label : ['폐점률'],
 	    backgroundColor : ['#ffd950'],//라벨별 컬러설정
 	    data: [0.0001], // 데이터 값 (합이 100%)
 	}
 	
 	
-	var labels = ['폐점률']; 
+	var labels = ['폐점률(%)']; 
 	  
 	var datasets = { datasets : [dataset], labels : labels}
 	
@@ -210,7 +205,7 @@ $(document).ready(function(){
 
     setInterval(function () {
         moveRight();
-    }, 4000);
+    }, 5000);
   
 	var slideCount = $('#slider ul li').length;
 	var slideWidth = $('#slider ul li').width();
