@@ -12,6 +12,10 @@ $(document).ready(function(){
 		location.href = 'web/about.html';
 	});
 	
+	$(".consultPage").on("click", function() {
+		location.href = 'web/consult.html';
+	});
+	
 	
 	
 	/*
