@@ -12,6 +12,10 @@ $(document).ready(function(){
 		location.href = 'about.html';
 	});
 	
+	$(".consultPage").on("click", function() {
+		location.href = 'consult.html';
+	});
+	
 	
 	/*
 	inspiration
