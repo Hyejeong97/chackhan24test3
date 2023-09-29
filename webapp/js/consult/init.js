@@ -24,44 +24,6 @@ $(document).ready(function(){
 	
 	$("[class*=why]").css("font-family", "'yg-jalnan', verdana, tahoma");
 	
-	var swiper = new Swiper(".swiper", {
-	  effect: "coverflow",
-	  grabCursor: true,
-	  centeredSlides: true,
-	  coverflowEffect: {
-	    rotate: 0,
-	    stretch: 0,
-	    depth: 100,
-	    modifier: 3,
-	    slideShadows: true
-	  },
-	  keyboard: {
-	    enabled: true
-	  },
-	  mousewheel: {
-	    thresholdDelta: 70
-	  },
-	  loop: true,
-	  pagination: {
-	    el: ".swiper-pagination",
-	    clickable: true
-	  },
-	  breakpoints: {
-	    640: {
-	      slidesPerView: 2
-	    },
-	    768: {
-	      slidesPerView: 1
-	    },
-	    1024: {
-	      slidesPerView: 2
-	    },
-	    1560: {
-	      slidesPerView: 3
-	    }
-	  }
-	});
-	
 	const menuToggle = document.querySelector('.menu-toggle');
 	const bxMenu = document.querySelector('.bx-menu');
 	const bxX = document.querySelector('.bx-x');
@@ -89,7 +51,16 @@ $(document).ready(function(){
 	});
 	
 	
-
+	$(".sms a").on("click", function(){
+		var content = $(".content").val();
+		if($(".content").val().length == 0){
+			alert("전송할 문자 내용을 입력해 주세요.");
+			return false;
+		}else{
+			$(".sms a").attr("href", "sms:010-6568-2360&body=" + content);
+		}
+		
+	});
 
 
 
@@ -103,16 +74,6 @@ $(document).ready(function(){
 	    });
 	});
 
-
-	var x = 126.868904;
-	var y = 37.5355793;
-	setMap(x, y);
-	
-	$("span.store").on("click", function(){
-		x = $(this).attr("x");
-		y = $(this).attr("y");
-		setMap(x, y);
-	});
 
 
 
@@ -164,27 +125,3 @@ $(document).ready(function(){
 
 });
 
-function setMap(x, y){
-	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-	    mapOption = { 
-	        center: new kakao.maps.LatLng(y, x), // 지도의 중심좌표
-	        level: 3 // 지도의 확대 레벨
-	    };
-	
-	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-	
-	// 마커가 표시될 위치입니다 
-	
-	var markerPosition  = new kakao.maps.LatLng(y, x); 
-	
-	// 마커를 생성합니다
-	var marker = new kakao.maps.Marker({
-	    position: markerPosition
-	});
-	
-	// 마커가 지도 위에 표시되도록 설정합니다
-	marker.setMap(map);
-	
-	// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-	// marker.setMap(null);   
-}
