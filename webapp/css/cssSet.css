@@ -35,10 +35,10 @@
 }
 
 @font-face {
-    font-family: 'Cafe24Simplehae';
+    font-family: 'Cafe24Ohsquareair';
     font-weight: normal; 
     font-style: normal; 
-    src: url(https://cdn.jsdelivr.net/gh/webfontworld/cafe24/Cafe24Simplehae.woff2) format('woff2');
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/cafe24/Cafe24Ohsquareair.woff2) format('woff2');
     font-display: swap;
 }
 
@@ -118,6 +118,6 @@
 
 .fontCafe24Set {
 	color: black;
-    font-family: 'Cafe24Simplehae';
+    font-family: 'Cafe24Ohsquareair';
     font-size: 20px;
 }
