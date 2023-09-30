@@ -34,6 +34,14 @@
 	font-style: normal;
 }
 
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    font-weight: normal; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/cafe24/Cafe24Simplehae.woff2) format('woff2');
+    font-display: swap;
+}
+
 .why1, .why3 {
 	color : #FC5230;
 	-webkit-text-stroke: 1.5px black;
@@ -105,5 +113,11 @@
 .fontGodoLgSet {
 	color: black;
     font-family: 'Godo';
+    font-size: 20px;
+}
+
+.fontCafe24Set {
+	color: black;
+    font-family: 'Cafe24Simplehae';
     font-size: 20px;
 }
