@@ -80,6 +80,18 @@
     font-size: 35px;
 }
 
+.fontSetCol2 {
+	color : black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 35px;
+}
+
+.fontSetTitle2 {
+	color: black;
+    font-family: 'yg-jalnan', verdana, tahoma;
+    font-size: 30px;
+}
+
 .fontSetTitle {
 	color: black;
     font-family: 'yg-jalnan', verdana, tahoma;
@@ -112,6 +124,12 @@
 
 .fontGodoLgSet {
 	color: black;
+    font-family: 'Godo';
+    font-size: 20px;
+}
+
+.fontGodoGraySet {
+	color: darkgray;
     font-family: 'Godo';
     font-size: 20px;
 }
