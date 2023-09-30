@@ -66,7 +66,7 @@ header {
   display: flex;
 }
 .nav-item {
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 .nav-link {
   font-size: 1.1rem;

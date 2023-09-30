@@ -1007,6 +1007,8 @@ textarea {
 
 .sms span {
 	cursor : pointer;
+	background : #DDECCA;
+	border-radius: 5px;
 }
 
 .sms span:before, .sms span:after {
@@ -1014,13 +1016,13 @@ textarea {
   position: absolute;
   width: 5px;
   border-radius: 50%;
-  background: #706fd3;
+  background: #51B098;
   top: 17px;
   transition: height 0.3s 0.3s ease, border-radius 0.3s 0.3s ease, top 0.3s 0.3s ease, width 0.3s ease;
 }
 
 .sms span:before {
-  height: 5px;
+  height: 0;
   left: 0;
 }
 
@@ -1051,3 +1053,21 @@ textarea {
   text-decoration: none;
   color: white;
 }
+
+.sms {
+  position: relative;
+  z-index: 1;
+}
+
+/* .sms a { */
+/*   background: gray; */
+/*   border-radius: 25px; */
+/*   cursor: pointer; */
+/*   width:500px; */
+/* } */
+
+/* .sms a:hover { */
+/*   background: #ff4500; 호버 시 색상 변경 */
+/*   color: #fff; */
+/*   font-weight: bold; 호버 시 글꼴 굵게 설정 */
+/* } */
