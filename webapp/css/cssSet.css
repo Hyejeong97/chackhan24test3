@@ -116,6 +116,12 @@
     font-size: 20px;
 }
 
+.fontGodoLgSet {
+	color: black;
+    font-family: 'Godo';
+    font-size: 25px;
+}
+
 .fontCafe24Set {
 	color: black;
     font-family: 'Cafe24Ohsquareair';
