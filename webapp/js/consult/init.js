@@ -57,7 +57,7 @@ $(document).ready(function(){
 			alert("전송할 문자 내용을 입력해 주세요.");
 			return false;
 		}else{
-			$(".sms a").attr("href", "sms:1588-7126&body=" + content);
+			$(".sms a").attr("href", "sms:010-6280-8125&body=" + content);
 		}
 		
 	});
