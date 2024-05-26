@@ -1,94 +1,46 @@
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+    
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
+
 $(document).ready(function(){
-
-	$(".mainPage").on("click", function() {
-		location.href = 'index.html';
-	});
-
-	$(".storePage").on("click", function() {
-		location.href = 'web/store.html';
-	});
-
-	$(".aboutPage").on("click", function() {
-		location.href = 'web/about.html';
-	});
-	
-	$(".consultPage").on("click", function() {
-		location.href = 'web/consult.html';
-	});
-	
-	
-	
-	/*
-	inspiration
-	https://dribbble.com/shots/4684682-Aquatic-Animals
-	*/
-	
-	$("[class*=why]").css("font-family", "'yg-jalnan', verdana, tahoma");
-	
-	var swiper = new Swiper(".swiper", {
-	  effect: "coverflow",
-	  grabCursor: true,
-	  centeredSlides: true,
-	  coverflowEffect: {
-	    rotate: 0,
-	    stretch: 0,
-	    depth: 100,
-	    modifier: 3,
-	    slideShadows: true
-	  },
-	  keyboard: {
-	    enabled: true
-	  },
-	  mousewheel: {
-	    thresholdDelta: 70
-	  },
-	  loop: true,
-	  pagination: {
-	    el: ".swiper-pagination",
-	    clickable: true
-	  },
-	  breakpoints: {
-	    640: {
-	      slidesPerView: 2
-	    },
-	    768: {
-	      slidesPerView: 1
-	    },
-	    1024: {
-	      slidesPerView: 2
-	    },
-	    1560: {
-	      slidesPerView: 3
-	    }
-	  }
-	});
-	
-	const menuToggle = document.querySelector('.menu-toggle');
-	const bxMenu = document.querySelector('.bx-menu');
-	const bxX = document.querySelector('.bx-x');
-	
-	const navBar = document.querySelector('.navbar');
-	
-	// --- open menu ---
-	
-	bxMenu.addEventListener('click', (e)=> {
-	    if(e.target.classList.contains('bx-menu')){
-	        navBar.classList.add('show-navbar');
-	        bxMenu.classList.add('hide-bx');
-	        bxX.classList.add('show-bx');
-	    }
-	})
-	
-	// --- close menu ---
-	
-	bxX.addEventListener('click', (e)=> {
-	    if(e.target.classList.contains('bx-x')){
-	        navBar.classList.remove('show-navbar');
-	        bxMenu.classList.remove('hide-bx');
-	        bxX.classList.remove('show-bx');
-	    }
-	});
-	
+	var x = 126.868904;
+    var y = 37.5355793;
+    setMap(x, y);   
+        
+    $("span.store").on("click", function(){
+		x = $(this).attr("x");
+		y = $(this).attr("y");
+		setMap(x, y);
+	}); 
 	
 	// 폐점률 도넛 차트
 	var dataset = {
@@ -179,76 +131,29 @@ $(document).ready(function(){
 	canvas.height = 300;
 	var pieChart2 = new Chart(canvas, config);
 	
-
-
-
-
-
-	document.addEventListener("DOMContentLoaded", function () {
-	    const menuToggle = document.getElementById("menuToggle");
-	    const menu = document.querySelector("ul.menu");
-	
-	    menuToggle.addEventListener("click", function () {
-	        menu.classList.toggle("active");
-	    });
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*********************/
-
-    setInterval(function () {
-        moveRight();
-    }, 5000);
-  
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
-	var sliderUlWidth = slideCount * slideWidth;
-	
-	$('#slider').css({ width: slideWidth, height: slideHeight });
-	
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-	
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
-
-
-
 });
+
+function setMap(x, y){
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = { 
+	        center: new window.kakao.maps.LatLng(y, x), // 지도의 중심좌표
+	        level: 3 // 지도의 확대 레벨
+	    };
+	
+	var map = new window.kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	
+	// 마커가 표시될 위치입니다 
+	
+	var markerPosition  = new window.kakao.maps.LatLng(y, x); 
+	
+	// 마커를 생성합니다
+	var marker = new window.kakao.maps.Marker({
+	    position: markerPosition
+	});
+	
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);
+	
+	// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+	// marker.setMap(null);   
+}
