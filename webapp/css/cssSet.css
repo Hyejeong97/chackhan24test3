@@ -204,11 +204,14 @@
 
 
 /* mobile */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
     .maxTitle {
         font-size: 30px; /* 모바일에서 폰트 크기 조절 */
     }
     td.detail {
         font-size: 12px; /* 모바일에서 폰트 크기 조절 */
+    }
+    nav ul li a{
+    	font-size: 16px;
     }
 }
