@@ -43,6 +43,17 @@ $(document).ready(function(){
 		setMap(x, y);
 	}); 
 	
+	$(".sms a").on("click", function(){
+		var content = $(".content").val();
+		if($(".content").val().length == 0){
+			alert("전송할 문자 내용을 입력해 주세요.");
+			return false;
+		}else{
+			$(".sms a").attr("href", "sms:010-6280-8125&body=" + content);
+		}
+		
+	});
+	
 	// 폐점률 도넛 차트
 	var dataset = {
 	    label : ['폐점률'],
