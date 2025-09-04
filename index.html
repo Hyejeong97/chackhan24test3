@@ -490,11 +490,11 @@
   <section id="contact">
     <h2>상담문의</h2>
     <div class="contact container">
-      <form>
-        <input type="text" placeholder="이름" required>
-        <input type="tel" placeholder="연락처" required>
-        <textarea placeholder="문의내용" rows="5" required></textarea>
-        <button type="submit">문의 보내기</button>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="이름" required>
+        <input type="tel" id="phone" placeholder="연락처" required>
+        <textarea id="message" placeholder="문의내용" rows="5" required></textarea>
+        <button type="submit" id="sendSms">문의 보내기</button>
       </form>
     </div>
   </section>
@@ -638,12 +638,39 @@
     config2
   );
 
+
+	   document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // 폼 제출 기본 동작 막기
+
+      // 입력값 가져오기
+      var name = document.getElementById("name").value.trim();
+      var phone = document.getElementById("phone").value.trim();
+      var message = document.getElementById("message").value.trim();
+
+      if (!name || !phone || !message) {
+          alert("모든 항목을 입력해 주세요.");
+          return;
+      }
+
+      // SMS 전송용 메시지 포맷
+      var smsContent = 
+        "이름: " + name + "\n" +
+        "연락처: " + phone + "\n" +
+        "문의내용:\n" + message + "\n\n문의사항입니다.";
+
+      // SMS 링크 생성
+      var smsLink = "sms:010-6280-8125?body=" + encodeURIComponent(smsContent);
+
+      // SMS 앱으로 이동
+      window.location.href = smsLink;
+  });
     
   </script>
 
 
 </body>
 </html>
+
 
 
 
