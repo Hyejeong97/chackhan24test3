@@ -649,63 +649,7 @@
     });
   });
     
-  // 첫 번째 차트 - 재계약률
-  const data1 = {
-    labels: ['재계약률(%)'],
-    datasets: [{
-      label: '재계약률',
-      data: [40],
-      backgroundColor: ['#28c3d7']
-    }]
-  };
-
-  const config1 = {
-    type: 'doughnut',
-    data: data1,
-    options: {
-      responsive: false,
-      plugins: {
-        legend: { position: 'top' },
-        datalabels: { color: 'black', font: { size: 15 } }
-      }
-    },
-    plugins: [ChartDataLabels]
-  };
-
-  const pieChart = new Chart(
-    document.getElementById('pieChart'),
-    config1
-  );
-
-  // 두 번째 차트 - 폐점율
-  const data2 = {
-    labels: ['폐점율(%)'],
-    datasets: [{
-      label: '폐점율',
-      data: [0.1],
-      backgroundColor: ['#ff6b6b']
-    }]
-  };
-
-  const config2 = {
-    type: 'doughnut',
-    data: data2,
-    options: {
-      responsive: false,
-      plugins: {
-        legend: { position: 'top' },
-        datalabels: { color: 'black', font: { size: 15 } }
-      }
-    },
-    plugins: [ChartDataLabels]
-  };
-
-  const pieChart2 = new Chart(
-    document.getElementById('pieChart2'),
-    config2
-  );
-
-
+  
 	   document.getElementById("contactForm").addEventListener("submit", function(e) {
       e.preventDefault(); // 폼 제출 기본 동작 막기
 
@@ -737,6 +681,7 @@
 
 </body>
 </html>
+
 
 
 
