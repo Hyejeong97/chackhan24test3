@@ -278,11 +278,11 @@
   </header>
 
   <!-- Hero Section -->
-<section class="hero">
-  <h1>대표가 직접 매장 운영 중</h1>
-  <h1>다양한 경험을 보유하여</h1>
-  <h1>믿음이 가는 브랜드</h1>
-  <a href="#contact">상담문의 바로가기</a>
+<section class="hero fade-in">
+  <h1 class="fade-in">대표가 직접 매장 운영 중</h1>
+  <h1 class="fade-in">다양한 경험을 보유하여</h1>
+  <h1 class="fade-in">믿음이 가는 브랜드</h1>
+  <a href="#contact" class="fade-in">상담문의 바로가기</a>
 </section>
 
 <section id="about">
@@ -600,7 +600,7 @@
     toggle.addEventListener('click', () => { menu.classList.toggle('active'); });
 
     // 스크롤 애니메이션
-    const sections = document.querySelectorAll('section:not(.hero), .hero a'); // Hero 제외
+    const sections = document.querySelectorAll('section:not(.hero)'); // Hero 제외
     window.addEventListener('scroll', () => {
       sections.forEach(sec => {
         const top = sec.getBoundingClientRect().top;
@@ -740,6 +740,7 @@
 
 </body>
 </html>
+
 
 
 
