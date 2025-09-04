@@ -87,8 +87,14 @@
 
 /* 모바일 대응 */
 @media(max-width:768px){
-  .row { flex-wrap:nowrap; }
-  .item { flex:0 0 80%; }
+  .row { 
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    justify-content: center; /* 가운데 정렬 */
+  }
+  .item { 
+    flex: 0 0 90%; /* 넓이를 조금 더 키움 */
+    margin-bottom: 20px; /* 아이템 간 간격 추가 */
+  }
 }
 
 
@@ -670,6 +676,7 @@
 
 </body>
 </html>
+
 
 
 
