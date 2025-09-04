@@ -159,33 +159,67 @@
 }
 
     /* Hero */
-    .hero { display:relative; align-items:center; justify-content:center; height:80vh; background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x600') center/cover no-repeat; color:#fff; text-align:center; flex-direction:column; }
-    
-	  .hero h1 {
-		  font-family: 'Noto Sans KR', 'Arial', sans-serif;
-		  font-size: 3rem;
-		  font-weight: 800;
-		  color: #000;
-		  line-height: 1.2;
-		  margin: 10px 0;
-		
-		  display: inline;
-		  background: linear-gradient(to bottom, rgba(255, 255, 0, 0.5) 50%, transparent 50%);
-		  background-color: rgba(255, 255, 0, 0.5); /* 형광펜 색상 */
-		  padding: 0 4px; /* 글자 주위 여백 */
-		  border-radius: 3px; /* 모서리 살짝 둥글게 */
-		}
-    .hero a { padding:12px 25px; background:#1E90FF; color:#fff; border-radius:5px; font-weight:700; transition:0.3s; opacity:0; transform:translateY(20px); }
-    .hero a:hover { background:#1C86EE; }
+.hero {
+  position: relative; /* display: relative → position: relative */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url('./webapp/img/store/allStore.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #000;
+}
 
-	  /* 모바일 대응 */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 10px 0;
+  display: inline-block;
+  background: linear-gradient(to bottom, rgba(255, 255, 0, 0.5) 50%, transparent 50%);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.hero a {
+  padding: 12px 25px;
+  background: #1E90FF;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+.hero a:hover {
+  background: #1C86EE;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media(max-width:768px){
   .hero h1 {
     font-size: 2rem;
     padding: 0 2px;
   }
-  
+  .hero a {
+    padding: 10px 20px;
+  }
 }
+
 
     /* Sections */
     section { padding:100px 20px; opacity:0; transform:translateY(20px); transition:1s; }
@@ -246,17 +280,10 @@
   </header>
 
   <!-- Hero Section -->
-<section class="hero" 
-         style="display: flex; flex-direction: column; justify-content: center; align-items: center; 
-                height: 100vh; width: 100%; 
-                background-image: url('./webapp/img/store/allStore.jpg'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                text-align: center; color: #fff;">
-  <h1 class="maxTitle lineSet">대표가 직접 매장 운영 중</h1>
-  <h1 class="maxTitle lineSet">다양한 경험을 보유하여</h1>
-  <h1 class="maxTitle lineSet">믿음이 가는 브랜드</h1>
+<section class="hero">
+  <h1>대표가 직접 매장 운영 중</h1>
+  <h1>다양한 경험을 보유하여</h1>
+  <h1>믿음이 가는 브랜드</h1>
   <a href="#contact">상담문의 바로가기</a>
 </section>
 
@@ -715,6 +742,7 @@
 
 </body>
 </html>
+
 
 
 
