@@ -34,12 +34,56 @@
 .row { display:flex; gap:30px; flex-wrap:nowrap; padding:10px 0; }
 .item { flex:0 0 320px; transition: transform 0.3s; }
 .item:hover { transform: scale(1.05); }
-.rounded-rectangle { position:relative; border-radius:20px; overflow:hidden; height:400px; background-size:cover; background-position:center; box-shadow:0 8px 20px rgba(0,0,0,0.15); }
-.text-box { position:absolute; bottom:0; width:100%; background:linear-gradient(to top, rgba(0,0,0,0.7), transparent); color:#fff; padding:20px; }
-.text-box h3 { font-size:24px; font-weight:700; margin-bottom:10px; }
-.text-box p { font-size:16px; line-height:1.5; }
-.lineSet { text-decoration:underline; }
-.fontB { font-weight:700; }
+.rounded-rectangle {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 60%; /* height 대신 비율로 처리하여 깨짐 방지 */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 글자 대비를 위한 블랙 투명 오버레이 */
+.rounded-rectangle::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  padding: 20px;
+  z-index: 1; /* 오버레이 위 */
+}
+
+.text-box h3 {
+  font-size: 1.5rem; /* 24px → 상대 단위로 조정 */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1rem; /* 16px → 1rem */
+  line-height: 1.5;
+}
+
+.lineSet {
+  text-decoration: underline;
+}
+
+.fontB {
+  font-weight: 700;
+}
 
 /* 모바일 대응 */
 @media(max-width:768px){
@@ -598,9 +642,10 @@
   </script>
 
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=여기에_본인_APPKEY&libraries=services"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a140a6ef5eb24d9195c32555b364b653&libraries=services"></script>
 </body>
 </html>
+
 
 
 
