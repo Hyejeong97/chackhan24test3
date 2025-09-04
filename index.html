@@ -29,9 +29,11 @@
 
     @media(max-width:768px){
       nav ul { display:none; flex-direction:column; background:#fff; position:absolute; top:60px; right:0; width:200px; border:1px solid #eee; }
-      nav ul.active { display:flex; }
+      nav ul.active { display:flex; padding:20px;}
       .menu-toggle { display:block; }
     }
+
+	  
 .scrollable { overflow-x:auto; padding-bottom:20px; }
 .row { display:flex; gap:30px; flex-wrap:nowrap; padding:10px 0; }
 .item { flex:0 0 320px; transition: transform 0.3s; }
@@ -158,9 +160,23 @@
 
     /* Hero */
     .hero { display:flex; align-items:center; justify-content:center; height:80vh; background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x600') center/cover no-repeat; color:#fff; text-align:center; flex-direction:column; }
-    .hero h1 { font-size:3rem; margin-bottom:20px; opacity:0; transform:translateY(20px); transition:1s; }
+    
+	  .hero h1.maxTitle {
+  font-size: 3rem; /* 데스크탑 기준 */
+  color: #000; /* 글자 검은색 */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
     .hero a { padding:12px 25px; background:#1E90FF; color:#fff; border-radius:5px; font-weight:700; transition:0.3s; opacity:0; transform:translateY(20px); }
     .hero a:hover { background:#1C86EE; }
+
+	  /* 모바일 대응 */
+@media(max-width:768px){
+  .hero h1.maxTitle {
+    font-size: 2rem;
+  }
+  
+}
 
     /* Sections */
     section { padding:100px 20px; opacity:0; transform:translateY(20px); transition:1s; }
@@ -229,7 +245,9 @@
                 background-position: center; 
                 background-repeat: no-repeat; 
                 text-align: center; color: #fff;">
-  <h1 style="font-size: 3rem; margin-bottom: 20px; color: #000;">착한가게24와 함께 시작하세요</h1>
+  <h1 class="maxTitle lineSet">대표가 직접 매장 운영 중</h1>
+  <h1 class="maxTitle lineSet">다양한 경험을 보유하여</h1>
+  <h1 class="maxTitle lineSet">믿음이 가는 브랜드</h1>
   <a href="#contact">상담문의 바로가기</a>
 </section>
 
@@ -688,6 +706,7 @@
 
 </body>
 </html>
+
 
 
 
