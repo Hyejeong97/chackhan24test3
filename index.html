@@ -88,12 +88,24 @@
 /* 모바일 대응 */
 @media(max-width:768px){
   .row { 
-    flex-wrap: wrap; /* 줄 바꿈 허용 */
-    justify-content: center; /* 가운데 정렬 */
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
   .item { 
-    flex: 0 0 90%; /* 넓이를 조금 더 키움 */
-    margin-bottom: 20px; /* 아이템 간 간격 추가 */
+    flex: 0 0 90%; 
+    margin-bottom: 20px; 
+  }
+  .rounded-rectangle {
+    height: 300px; /* 모바일에서 조금 더 낮게 */
+  }
+  .text-box {
+    padding: 15px; /* 글자 공간 약간 조정 */
+  }
+  .text-box h3 {
+    font-size: 20px; /* 제목 글자 조금 줄임 */
+  }
+  .text-box p {
+    font-size: 14px; /* 본문 글자 조금 줄임 */
   }
 }
 
@@ -676,6 +688,7 @@
 
 </body>
 </html>
+
 
 
 
