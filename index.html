@@ -571,21 +571,17 @@
     </div>
   </section>
 
-	<!-- ===== 착한가게24 배경음악 플레이어 ===== -->
+	<!-- ===== 착한가게24 배경음악 (자동재생) ===== -->
 <div id="musicPlayer" style="position:fixed; bottom:25px; right:25px; z-index:9999; 
      background:rgba(255,255,255,0.95); border-radius:50px; padding:12px 18px; 
      box-shadow:0 5px 20px rgba(0,0,0,0.2); display:flex; align-items:center; gap:12px; 
-     cursor:pointer; user-select:none; border:2px solid #1E90FF;">
-  <span id="musicIcon" style="font-size:32px; transition:0.3s;">🎵</span>
-  <div>
-    <span id="musicTitle" style="font-size:15px; font-weight:600; color:#1E90FF;">착한가게24 BGM</span>
-  </div>
+     cursor:pointer; border:2px solid #1E90FF;">
+  <span id="musicIcon" style="font-size:32px;">🔊</span>
+  <span id="musicTitle" style="font-size:15px; font-weight:600; color:#1E90FF;"></span>
 </div>
 
-<!-- 오디오 태그 -->
-<audio id="bgm" loop>
+<audio id="bgm" loop autoplay>
   <source src="./webapp/착한가게24_cm.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
 </audio>
 
   <footer>
@@ -698,38 +694,53 @@
       window.location.href = smsLink;
   });
 
-	  // 배경음악 컨트롤
+	 // 자동 재생 + 클릭으로 ON/OFF
 const audio = document.getElementById('bgm');
 const player = document.getElementById('musicPlayer');
 const icon = document.getElementById('musicIcon');
-let isPlaying = false;
+let isPlaying = true;   // 처음부터 재생 상태
 
+// 페이지 로드되자마자 자동 재생 시도
+window.addEventListener('load', () => {
+  audio.volume = 0.55;     // 볼륨 55% (조절 가능)
+  
+  const playPromise = audio.play();
+  
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      // 자동 재생 성공
+      icon.textContent = '🔊';
+      player.style.background = '#1E90FF';
+      player.style.color = 'white';
+      player.style.borderColor = 'white';
+    }).catch(() => {
+      // 자동 재생 차단된 경우 (대부분 모바일 브라우저)
+      isPlaying = false;
+      icon.textContent = '🎵';
+      player.style.background = 'rgba(255,255,255,0.95)';
+      player.style.color = '#1E90FF';
+      player.style.borderColor = '#1E90FF';
+    });
+  }
+});
+
+// 클릭하면 ON/OFF 토글
 player.addEventListener('click', () => {
   if (isPlaying) {
-    // 멈춤
     audio.pause();
     icon.textContent = '🎵';
     player.style.background = 'rgba(255,255,255,0.95)';
+    player.style.color = '#1E90FF';
     player.style.borderColor = '#1E90FF';
   } else {
-    // 재생
     audio.play().then(() => {
       icon.textContent = '🔊';
       player.style.background = '#1E90FF';
       player.style.color = 'white';
-      player.style.borderColor = '#fff';
-    }).catch(err => {
-      console.log("재생 실패:", err);
-      alert("음악 재생을 위해 화면을 한번 클릭해주세요.");
+      player.style.borderColor = 'white';
     });
   }
   isPlaying = !isPlaying;
-});
-
-// 페이지 로드 시 준비
-window.addEventListener('load', () => {
-  // 처음에는 정지 상태로 시작
-  audio.volume = 0.7;  // 기본 볼륨 70%
 });
     
   </script>
