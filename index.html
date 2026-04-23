@@ -573,11 +573,11 @@
 
 	<!-- 음악 플레이어 -->
 <div id="musicPlayer" style="position:fixed; bottom:25px; right:25px; z-index:9999; 
-     background:rgba(255,255,255,0.95); border-radius:50px; padding:12px 18px; 
-     box-shadow:0 5px 20px rgba(0,0,0,0.2); display:flex; align-items:center; gap:12px; 
-     cursor:pointer; border:2px solid #1E90FF;">
-  <span id="musicIcon" style="font-size:32px;">🎵</span>
-  <span id="musicTitle" style="font-size:15px; font-weight:600; color:#1E90FF;">착한가게24 BGM</span>
+     width: 50px; height: 50px; background:rgba(255,255,255,0.9); border-radius:50%; 
+     display:flex; align-items:center; justify-content:center;
+     box-shadow:0 4px 15px rgba(0,0,0,0.2); cursor:pointer; border:2px solid #1E90FF;
+     transition: all 0.3s ease;">
+  <span id="musicIcon" style="font-size:24px;">🎵</span>
 </div>
 
 <audio id="bgm" loop>
@@ -609,6 +609,51 @@
 </footer>
 
   <script>
+
+	  const audio = document.getElementById('bgm');
+const player = document.getElementById('musicPlayer');
+const icon = document.getElementById('musicIcon');
+
+let isPlaying = false;
+audio.volume = 0.5;
+
+// 재생 함수
+function playBGM() {
+  audio.play().then(() => {
+    isPlaying = true;
+    icon.textContent = '🔊';
+    player.style.background = '#1E90FF';
+    icon.style.filter = 'brightness(0) invert(1)'; // 아이콘 흰색으로
+  }).catch(err => {
+    console.log("재생 대기 중...");
+  });
+}
+
+// 정지 함수
+function pauseBGM() {
+  audio.pause();
+  isPlaying = false;
+  icon.textContent = '🎵';
+  player.style.background = 'rgba(255,255,255,0.9)';
+  icon.style.filter = 'none';
+}
+
+// [핵심] 사용자가 페이지 내 어디든 클릭하면 노래 시작 (최초 1회)
+document.body.addEventListener('click', () => {
+  if (!isPlaying) {
+    playBGM();
+  }
+}, { once: true });
+
+// 버튼 클릭 시 토글
+player.addEventListener('click', (e) => {
+  e.stopPropagation(); // body 클릭 이벤트 방해 금지
+  if (isPlaying) {
+    pauseBGM();
+  } else {
+    playBGM();
+  }
+});
     // 메뉴 토글
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('nav ul');
@@ -693,61 +738,6 @@
       // SMS 앱으로 이동
       window.location.href = smsLink;
   });
-
-	// ===== 착한가게24 BGM - AbortError 완벽 방지 버전 =====
-const audio = document.getElementById('bgm');
-const player = document.getElementById('musicPlayer');
-const icon = document.getElementById('musicIcon');
-const title = document.getElementById('musicTitle');
-
-let isPlaying = false;
-
-audio.volume = 0.55;
-
-// 안전한 재생 함수
-async function safePlay() {
-  try {
-    await audio.play();
-    isPlaying = true;
-    icon.textContent = '🔊';
-    player.style.background = '#1E90FF';
-    title.style.color = 'white';
-    player.style.borderColor = 'white';
-  } catch (err) {
-    console.log("자동 재생이 브라우저에 의해 차단되었습니다. 사용자의 클릭이 필요합니다.");
-    isPlaying = false;
-    icon.textContent = '🎵';
-  }
-}
-
-// 안전한 정지 함수
-function safePause() {
-  audio.pause();
-  isPlaying = false;
-  icon.textContent = '🎵';
-  player.style.background = 'rgba(255,255,255,0.95)';
-  title.style.color = '#1E90FF';
-  player.style.borderColor = '#1E90FF';
-}
-
-// 1. 페이지 로드 시 시도
-window.addEventListener('load', () => {
-  // 브라우저 정책상 바로 play()하면 에러가 날 확률이 높으므로 
-  // 사용자가 페이지 어디든 '첫 클릭'을 할 때 재생되도록 유도하는 것이 가장 깔끔합니다.
-  document.body.addEventListener('click', () => {
-    if (!isPlaying) safePlay();
-  }, { once: true }); // 딱 한 번만 실행
-});
-
-// 2. 버튼 클릭으로 ON / OFF 토글
-player.addEventListener('click', (e) => {
-  e.stopPropagation(); // body 클릭 이벤트와 겹치지 않게 방지
-  if (isPlaying) {
-    safePause();
-  } else {
-    safePlay();
-  }
-});
     
   </script>
 
