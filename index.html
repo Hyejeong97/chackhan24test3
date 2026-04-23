@@ -571,6 +571,23 @@
     </div>
   </section>
 
+	<!-- ===== 착한가게24 배경음악 플레이어 ===== -->
+<div id="musicPlayer" style="position:fixed; bottom:25px; right:25px; z-index:9999; 
+     background:rgba(255,255,255,0.95); border-radius:50px; padding:12px 18px; 
+     box-shadow:0 5px 20px rgba(0,0,0,0.2); display:flex; align-items:center; gap:12px; 
+     cursor:pointer; user-select:none; border:2px solid #1E90FF;">
+  <span id="musicIcon" style="font-size:32px; transition:0.3s;">🎵</span>
+  <div>
+    <span id="musicTitle" style="font-size:15px; font-weight:600; color:#1E90FF;">착한가게24 BGM</span>
+  </div>
+</div>
+
+<!-- 오디오 태그 -->
+<audio id="bgm" loop>
+  <source src="./webapp/착한가게24 cm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
   <footer>
   <!-- 상단 상담문의 -->
   <div class="container top-footer" style="display:flex; justify-content:center; align-items:center; padding:20px; gap:10px; flex-wrap:wrap;">
@@ -680,6 +697,40 @@
       // SMS 앱으로 이동
       window.location.href = smsLink;
   });
+
+	  // 배경음악 컨트롤
+const audio = document.getElementById('bgm');
+const player = document.getElementById('musicPlayer');
+const icon = document.getElementById('musicIcon');
+let isPlaying = false;
+
+player.addEventListener('click', () => {
+  if (isPlaying) {
+    // 멈춤
+    audio.pause();
+    icon.textContent = '🎵';
+    player.style.background = 'rgba(255,255,255,0.95)';
+    player.style.borderColor = '#1E90FF';
+  } else {
+    // 재생
+    audio.play().then(() => {
+      icon.textContent = '🔊';
+      player.style.background = '#1E90FF';
+      player.style.color = 'white';
+      player.style.borderColor = '#fff';
+    }).catch(err => {
+      console.log("재생 실패:", err);
+      alert("음악 재생을 위해 화면을 한번 클릭해주세요.");
+    });
+  }
+  isPlaying = !isPlaying;
+});
+
+// 페이지 로드 시 준비
+window.addEventListener('load', () => {
+  // 처음에는 정지 상태로 시작
+  audio.volume = 0.7;  // 기본 볼륨 70%
+});
     
   </script>
 
