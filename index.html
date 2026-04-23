@@ -580,6 +580,16 @@
   <span id="musicIcon" style="font-size:24px;">🎵</span>
 </div>
 
+	<!-- 유튜브 버튼 추가 -->
+<a href="https://www.youtube.com/@%EC%B0%A9%ED%95%9C%EA%B0%80%EA%B2%8C24" target="_blank" id="youtubeBtn"
+   style="position:fixed; bottom:25px; right:90px; z-index:9999;
+          width:50px; height:50px; background:#FF0000; border-radius:50%; 
+          display:flex; align-items:center; justify-content:center; 
+          box-shadow:0 4px 15px rgba(0,0,0,0.3); color:white; 
+          font-size:26px; text-decoration:none; transition:all 0.3s ease;">
+  <span>▶️</span>
+</a>
+
 <audio id="bgm" loop preload="auto">
   <source src="./webapp/bgm.mp3" type="audio/mpeg">
 </audio>
@@ -610,6 +620,18 @@
 
   <script>
 
+	  // 유튜브 버튼 호버 효과
+const youtubeBtn = document.getElementById('youtubeBtn');
+youtubeBtn.addEventListener('mouseenter', () => {
+  youtubeBtn.style.transform = 'scale(1.1)';
+  youtubeBtn.style.boxShadow = '0 6px 20px rgba(255,0,0,0.4)';
+});
+youtubeBtn.addEventListener('mouseleave', () => {
+  youtubeBtn.style.transform = 'scale(1)';
+  youtubeBtn.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+});
+	  
+// 오디오
 	  const audio = document.getElementById('bgm');
 const player = document.getElementById('musicPlayer');
 const icon = document.getElementById('musicIcon');
