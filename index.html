@@ -614,46 +614,37 @@
 const player = document.getElementById('musicPlayer');
 const icon = document.getElementById('musicIcon');
 
-let isPlaying = false;
-audio.volume = 0.5;
-
-// 재생 함수
-function playBGM() {
-  audio.play().then(() => {
-    isPlaying = true;
-    icon.textContent = '🔊';
-    player.style.background = '#1E90FF';
-    icon.style.filter = 'brightness(0) invert(1)'; // 아이콘 흰색으로
-  }).catch(err => {
-    console.log("재생 대기 중...");
-  });
-}
-
-// 정지 함수
-function pauseBGM() {
-  audio.pause();
-  isPlaying = false;
-  icon.textContent = '🎵';
-  player.style.background = 'rgba(255,255,255,0.9)';
-  icon.style.filter = 'none';
-}
-
-// [핵심] 사용자가 페이지 내 어디든 클릭하면 노래 시작 (최초 1회)
-document.body.addEventListener('click', () => {
-  if (!isPlaying) {
-    playBGM();
-  }
-}, { once: true });
-
-// 버튼 클릭 시 토글
-player.addEventListener('click', (e) => {
-  e.stopPropagation(); // body 클릭 이벤트 방해 금지
-  if (isPlaying) {
-    pauseBGM();
-  } else {
-    playBGM();
-  }
+// 1. 소리가 나는지 확인하는 강제 트리거
+player.addEventListener('click', () => {
+    console.log("버튼 클릭됨"); // F12를 눌러 콘솔창에 이게 뜨는지 확인하세요.
+    
+    if (audio.paused) {
+        audio.play()
+            .then(() => {
+                console.log("재생 성공!");
+                icon.textContent = '🔊';
+            })
+            .catch((e) => {
+                console.error("재생 실패, 이유:", e);
+                alert("재생 실패: 파일 경로를 확인하거나 브라우저 설정에서 소리를 허용해주세요.");
+            });
+    } else {
+        audio.pause();
+        icon.textContent = '🎵';
+        console.log("일시정지");
+    }
 });
+
+
+
+
+
+
+
+
+
+
+	  
     // 메뉴 토글
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('nav ul');
